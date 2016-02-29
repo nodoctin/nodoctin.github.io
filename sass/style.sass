@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,500,700,400)
+@import "compass/reset"
+
+$base-unit: 18
+
+html
+	font-size: 18px
+	@media (max-width: 544px)
+		font-size: 14px
+
+body
+	font-family: 'Work Sans', helvetica, arial, sans-serif
+	-webkit-font-smoothing: antialiased
+	color: #222
+
+// Utilities
+.wrap
+	padding: 1.5rem
+	margin-left: auto
+	margin-right: auto
+	&::after
+		display: table
+		clear: both
+		content: ""
+	//@media (max-width: 544px)
+	//	padding: 1.2rem
+
+@media (min-width: 544px)
+	.wrap
+		max-width: 576px
+@media (min-width: 768px)
+	.wrap
+		max-width: 720px
+@media (min-width: 992px)
+	.wrap
+		max-width: 940px
+
+// Cover Block
+.cover
+	background-color: #501540
+	background-image: url(../img/bg-2.png)
+	background-size: cover
+	background-position: center center
+	color: #fff
+.cover-logo
+	opacity: 0
+	text-align: center
+	padding: 2rem
+	transform: scale(1.1)
+	transition: all 0.7s ease
+	@media (max-width: 544px)
+		display: none
+.cover-logo.load
+	opacity: 1
+	transform: scale(1)
+.cover-description
+	h1
+		opacity: 0
+		font-size: #{(36 / $base-unit)}rem
+		line-height: #{(46 / $base-unit)}rem
+		font-weight: 300
+		padding-left: 0
+		padding-right: 4rem
+		padding-top: 4rem
+		padding-bottom: 4rem
+		transform: scale(1.1)
+		transition: all 0.7s ease
+		@media (max-width: 544px)
+			text-align: center
+			padding: 4rem 1rem
+		@media (min-width: 992px)
+			width: 80%
+			padding: 4rem 1rem
+			text-align: center
+			margin: 0 auto
+		strong
+			font-weight: 700
+		.cover-name
+			border-bottom: solid 1px #fff
+.cover-description	h1.load
+	opacity: 1
+	transform: scale(1)
+.cover-scroll
+	padding: 2rem 0
+	text-align: center
+// Event Block
+.event
+	width: 80%
+	margin: 0 auto
+	padding: 2rem 0
+	@media (max-width: 544px)
+		width: 100%
+.event-info
+	padding: 4rem 0
+	h4
+		font-size: 1rem
+		font-weight: 700
+		text-transform: uppercase
+		color: #245be7
+		margin-bottom: 1rem
+	h2
+		font-size: 2.555rem
+		line-height: 3.27rem
+		font-weight: 700
+		color: #245be7
+		margin-bottom: 2.555rem
+	p
+		font-size: 1.333rem
+		line-height: 2rem
+		font-weight: 300
+		strong
+			font-weight: 500
+			border-bottom: 1px solid #222
+.event-profiles
+	padding: 4rem 0
+	h2
+		font-size: 2.555rem
+		line-height: 3.27rem
+		font-weight: 700
+		color: #245be7
+		margin-bottom: 2.555rem
+		text-align: center
+// Profile Sub-Block
+.profile-block
+	padding-bottom: 4rem
+	//margin-bottom: 4rem
+	//border-bottom: solid 1px #ddd
+	&:last-child
+		border: none
+		padding-bottom: 0
+.profile-block-photo
+	text-align: center
+	margin: 0 0 4rem 0
+	img
+		display: inline-block
+		max-width: 60%
+		padding-bottom: 1.5rem
+		@media (max-width: 544px)
+			max-width: 80%
+	small
+		display: block
+		text-align: center
+		font-size: 0.9rem
+		font-weight: 700
+	a
+		color: inherit
+	h3
+		font-size: 1.333rem
+		font-weight: 500
+		line-height: 2rem
+		font-weight: 700
+		margin-bottom: 0.25rem
+.profile-block-description
+	h3
+		font-size: 1.333rem
+		font-weight: 500
+		line-height: 2rem
+		font-weight: 500
+	p
+		font-size: 1.333rem
+		font-weight: 300
+		line-height: 2rem
+
+.event-register
+	text-align: center
+	margin: 4rem 0
+	h2
+		font-size: 2.555rem
+		line-height: 3.27rem
+		font-weight: 700
+		color: #245be7
+		margin-bottom: 2.555rem
+	p
+		padding: 0 2rem
+		font-size: 1.333rem
+		line-height: 2rem
+		font-weight: 300
+		@media (max-width: 544px)
+			padding: 0
+		strong
+			display: block
+			font-weight: 500
+.event-register-action
+	margin-top: 2rem
+	.button
+		font-size: 1.2rem
+		display: inline-block
+		padding: 1.5rem 2rem
+		background-color: #245be7
+		color: #fff
+		border-radius: 3px
+		text-decoration: none
+		transition: all 0.2s ease
+		box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2)
+		&:hover
+			opacity: 0.9
+			box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.2)
+			transform: scale(1.02)
+// Footer Block
+.footer
+	padding-bottom: 2rem
+.colophon
+	text-align: center
+	img
+		display: inline-block
+		margin-bottom: 2rem
+	p
+		font-size:	0.85rem
+		line-height: 1.4rem
+		color: #999
+	a
+		color: inherit
+		text-decoration: underline
+		&:hover
+			text-decoration: none
